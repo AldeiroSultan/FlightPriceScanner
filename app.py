@@ -50,154 +50,154 @@ def predict():
 
 
 
-        airline=request.form['airline']
-        if(airline=='Jet Airways'):
-            Airline_AirIndia = 0
+       airline = request.form['airline']
+        if(airline == 'Garuda Indonesia'):
+            Airline_AirAsia = 0
             Airline_GoAir = 0
-            Airline_IndiGo = 0
-            Airline_JetAirways = 1
+            Airline_Citilink = 0
+            Airline_GarudaIndonesia = 1
             Airline_MultipleCarriers = 0
             Airline_SpiceJet = 0
-            Airline_Vistara = 0
+            Airline_BatikAir = 0
             Airline_Other = 0
 
-        elif (airline=='IndiGo'):
-            Airline_AirIndia = 0
+        elif (airline == 'Citilink'):
+            Airline_AirAsia = 0
             Airline_GoAir = 0
-            Airline_IndiGo = 1
-            Airline_JetAirways = 0
+            Airline_Citilink = 1
+            Airline_GarudaIndonesia = 0
             Airline_MultipleCarriers = 0
             Airline_SpiceJet = 0
-            Airline_Vistara = 0
+            Airline_BatikAir = 0
             Airline_Other = 0
 
-        elif (airline=='Air India'):
-            Airline_AirIndia = 1
+        elif (airline == 'AirAsia'):
+            Airline_AirAsia = 1
             Airline_GoAir = 0
-            Airline_IndiGo = 0
-            Airline_JetAirways = 0
+            Airline_Citilink = 0
+            Airline_GarudaIndonesia = 0
             Airline_MultipleCarriers = 0
             Airline_SpiceJet = 0
-            Airline_Vistara = 0
+            Airline_BatikAir = 0
             Airline_Other = 0
             
-        elif (airline=='Multiple carriers'):
-            Airline_AirIndia = 0
+        elif (airline == 'Multiple carriers'):
+            Airline_AirAsia = 0
             Airline_GoAir = 0
-            Airline_IndiGo = 0
-            Airline_JetAirways = 0
+            Airline_Citilink = 0
+            Airline_GarudaIndonesia = 0
             Airline_MultipleCarriers = 1
             Airline_SpiceJet = 0
-            Airline_Vistara = 0
+            Airline_BatikAir = 0
             Airline_Other = 0
             
-        elif (airline=='SpiceJet'):
-            Airline_AirIndia = 0
+        elif (airline == 'SpiceJet'):
+            Airline_AirAsia = 0
             Airline_GoAir = 0
-            Airline_IndiGo = 0
-            Airline_JetAirways = 0
+            Airline_Citilink = 0
+            Airline_GarudaIndonesia = 0
             Airline_MultipleCarriers = 0
             Airline_SpiceJet = 1
-            Airline_Vistara = 0
+            Airline_BatikAir = 0
             Airline_Other = 0
             
-        elif (airline=='Vistara'):
-            Airline_AirIndia = 0
+        elif (airline == 'Batik Air'):
+            Airline_AirAsia = 0
             Airline_GoAir = 0
-            Airline_IndiGo = 0
-            Airline_JetAirways = 0
+            Airline_Citilink = 0
+            Airline_GarudaIndonesia = 0
             Airline_MultipleCarriers = 0
             Airline_SpiceJet = 0
-            Airline_Vistara = 1
+            Airline_BatikAir = 1
             Airline_Other = 0
 
-        elif (airline=='GoAir'):
-            Airline_AirIndia = 0
+        elif (airline == 'GoAir'):
+            Airline_AirAsia = 0
             Airline_GoAir = 1
-            Airline_IndiGo = 0
-            Airline_JetAirways = 0
+            Airline_Citilink = 0
+            Airline_GarudaIndonesia = 0
             Airline_MultipleCarriers = 0
             Airline_SpiceJet = 0
-            Airline_Vistara = 0
+            Airline_BatikAir = 0
             Airline_Other = 0
 
         else:
-            Airline_AirIndia = 0
+            Airline_AirAsia = 0
             Airline_GoAir = 0
-            Airline_IndiGo = 0
-            Airline_JetAirways = 0
+            Airline_Citilink = 0
+            Airline_GarudaIndonesia = 0
             Airline_MultipleCarriers = 0
             Airline_SpiceJet = 0
-            Airline_Vistara = 0
+            Airline_BatikAir = 0
             Airline_Other = 1
 
 
         Source = request.form["Source"]
-        if (Source == 'Delhi'):
-            Source_Delhi = 1
-            Source_Kolkata = 0
-            Source_Mumbai = 0
-            Source_Chennai = 0
+        if (Source == 'Jakarta'):
+            Source_Jakarta = 1
+            Source_Surabaya = 0
+            Source_Bandung = 0
+            Source_Semarang = 0
 
-        elif (Source == 'Kolkata'):
-            Source_Delhi = 0
-            Source_Kolkata = 1
-            Source_Mumbai = 0
-            Source_Chennai = 0
+        elif (Source == 'Surabaya'):
+            Source_Jakarta = 0
+            Source_Surabaya = 1
+            Source_Bandung = 0
+            Source_Semarang = 0
 
-        elif (Source == 'Mumbai'):
-            Source_Delhi = 0
-            Source_Kolkata = 0
-            Source_Mumbai = 1
-            Source_Chennai = 0
+        elif (Source == 'Bandung'):
+            Source_Jakarta = 0
+            Source_Surabaya = 0
+            Source_Bandung = 1
+            Source_Semarang = 0
 
-        elif (Source == 'Chennai'):
-            Source_Delhi = 0
-            Source_Kolkata = 0
-            Source_Mumbai = 0
-            Source_Chennai = 1
-
-        else:
-            Source_Delhi = 0
-            Source_Kolkata = 0
-            Source_Mumbai = 0
-            Source_Chennai = 0
-
-
-
-        Source = request.form["Destination"]
-        if (Source == 'Cochin'):
-            Destination_Cochin = 1
-            Destination_Delhi = 0
-            Destination_Hyderabad = 0
-            Destination_Kolkata = 0
-        
-        elif (Source == 'Delhi'):
-            Destination_Cochin = 0
-            Destination_Delhi = 1
-            Destination_Hyderabad = 0
-            Destination_Kolkata = 0
-
-        elif (Source == 'Hyderabad'):
-            Destination_Cochin = 0
-            Destination_Delhi = 0
-            Destination_Hyderabad = 1
-            Destination_Kolkata = 0
-
-        elif (Source == 'Kolkata'):
-            Destination_Cochin = 0
-            Destination_Delhi = 0
-            Destination_Hyderabad = 0
-            Destination_Kolkata = 1
+        elif (Source == 'Semarang'):
+            Source_Jakarta = 0
+            Source_Surabaya = 0
+            Source_Bandung = 0
+            Source_Semarang = 1
 
         else:
-            Destination_Cochin = 0
-            Destination_Delhi = 0
-            Destination_Hyderabad = 0
-            Destination_Kolkata = 0
+            Source_Jakarta = 0
+            Source_Surabaya = 0
+            Source_Bandung = 0
+            Source_Semarang = 0
 
 
-        prediction=model.predict([[
+
+        Destination = request.form["Destination"]
+        if (Destination == 'Medan'):
+            Destination_Medan = 1
+            Destination_Jakarta = 0
+            Destination_Makassar = 0
+            Destination_Surabaya = 0
+
+        elif (Destination == 'Jakarta'):
+            Destination_Medan = 0
+            Destination_Jakarta = 1
+            Destination_Makassar = 0
+            Destination_Surabaya = 0
+
+        elif (Destination == 'Makassar'):
+            Destination_Medan = 0
+            Destination_Jakarta = 0
+            Destination_Makassar = 1
+            Destination_Surabaya = 0
+
+        elif (Destination == 'Surabaya'):
+            Destination_Medan = 0
+            Destination_Jakarta = 0
+            Destination_Makassar = 0
+            Destination_Surabaya = 1
+
+        else:
+            Destination_Medan = 0
+            Destination_Jakarta = 0
+            Destination_Makassar = 0
+            Destination_Surabaya = 0
+
+
+        prediction = model.predict([[
             Total_Stops,
             journey_day,
             journey_month,
@@ -207,22 +207,23 @@ def predict():
             arrival_min,
             Duration_hour,
             Duration_mins,
-            Airline_AirIndia,
+            Airline_AirAsia,
             Airline_GoAir,
-            Airline_IndiGo,
-            Airline_JetAirways,
+            Airline_Citilink,
+            Airline_GarudaIndonesia,
             Airline_MultipleCarriers,
             Airline_Other,
             Airline_SpiceJet,
-            Airline_Vistara,
-            Source_Chennai,
-            Source_Kolkata,
-            Source_Mumbai,
-            Destination_Cochin,
-            Destination_Delhi,
-            Destination_Hyderabad,
-            Destination_Kolkata,
+            Airline_BatikAir,
+            Source_Semarang,
+            Source_Surabaya,
+            Source_Bandung,
+            Destination_Medan,
+            Destination_Jakarta,
+            Destination_Makassar,
+            Destination_Surabaya,
         ]])
+
 
         output=round(prediction[0],2)
 
