@@ -3,6 +3,9 @@ from flask_cors import cross_origin
 import sklearn
 import pickle
 import pandas as pd
+import ssl
+import certifi
+from OpenSSL import SSL
 
 
 app = Flask(__name__)
